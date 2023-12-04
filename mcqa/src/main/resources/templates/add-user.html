@@ -13,49 +13,44 @@
     </head>
     <body class="sb-nav-fixed">
         <nav class="nav nav-borders">
-            <a class="nav-link" href="admin.html">All Questions</a>
-            <a class="nav-link disabled" href="add-question.html">Add Question</a>
-            <a class="nav-link" href="all-users.html">All Users</a>
-            <a class="nav-link" href="add-user.html">Add User</a>
+            <a class="nav-link" href="admin">All Questions</a>
+            <a class="nav-link" href="add-question">Add Question</a>
+            <a class="nav-link" href="all-users">All Users</a>
+            <a class="nav-link disabled" href="add-user">Add User</a>
         </nav>
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Add Question</h1>
+                        <h1 class="mt-4">Add User</h1>
                         <div class="card mb-4">
                             <div class="card-body">
                                 <form>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="question" type="text" placeholder="Enter the Question" />
-                                        <label for="question">Enter the Question</label>
+                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                        <label for="inputFirstName">First name</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="option1" type="text" placeholder="Option 1" />
-                                        <label for="option1">Option 1</label>
+                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                        <label for="inputLastName">Last name</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="option2" type="text" placeholder="Option 2" />
-                                        <label for="option2">Option 2</label>
+                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                        <label for="inputEmail">Email address</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="option3" type="text" placeholder="Option 3" />
-                                        <label for="option3">Option 3</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
-                                        <input class="form-control" id="option4" type="text" placeholder="Option 4" />
-                                        <label for="option4">Option 4</label>
+                                        <input class="form-control" id="inputPassword" type="password" placeholder="Create a password" />
+                                        <label for="inputPassword">Password</label>
                                     </div>
                                     <div class="mb-3">
-                                        <label for="answer">Answer</label>
-                                        <select class="form-control" id="answer">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
+                                        <label for="role">Role</label>
+                                        <select class="form-control" id="role">
+                                            <option>ADMIN</option>
+                                            <option>EDUCATOR</option>
+                                            <option>STUDENT</option>
                                         </select>
                                     </div>
                                     <div class="mt-4 mb-0">
-                                        <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Create Question</a></div>
+                                        <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Create User</a></div>
                                     </div>
                                 </form>
                             </div>
