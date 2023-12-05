@@ -17,6 +17,7 @@
             <a class="nav-link" href="add-question">Add Question</a>
             <a class="nav-link" href="all-users">All Users</a>
             <a class="nav-link disabled" href="add-user">Add User</a>
+            <a class="nav-link" href="login">Logout</a>
         </nav>
             <div id="layoutSidenav_content">
                 <main>
@@ -24,33 +25,33 @@
                         <h1 class="mt-4">Add User</h1>
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form>
+                                <form action="#" th:action="@{/add-user}"  method="post" th:object="${user}">
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" />
+                                        <input class="form-control" id="inputFirstName" type="text" placeholder="Enter your first name" th:field="*{firstName}"/>
                                         <label for="inputFirstName">First name</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" />
+                                        <input class="form-control" id="inputLastName" type="text" placeholder="Enter your last name" th:field="*{lastName}"/>
                                         <label for="inputLastName">Last name</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
+                                        <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" th:field="*{email}"/>
                                         <label for="inputEmail">Email address</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="inputPassword" type="password" placeholder="Create a password" />
+                                        <input class="form-control" id="inputPassword" type="password" placeholder="Create a password" th:field="*{password}"/>
                                         <label for="inputPassword">Password</label>
                                     </div>
                                     <div class="mb-3">
                                         <label for="role">Role</label>
-                                        <select class="form-control" id="role">
-                                            <option>ADMIN</option>
-                                            <option>EDUCATOR</option>
-                                            <option>STUDENT</option>
+                                        <select class="form-control" id="role" th:field="*{role}">
+                                            <option value="ADMIN">ADMIN</option>
+                                            <option value="EDUCATOR">EDUCATOR</option>
+                                            <option value="STUDENT">STUDENT</option>
                                         </select>
                                     </div>
                                     <div class="mt-4 mb-0">
-                                        <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Create User</a></div>
+                                      <button type="submit">Create User</button>
                                     </div>
                                 </form>
                             </div>

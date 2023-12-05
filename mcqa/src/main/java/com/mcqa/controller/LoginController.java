@@ -1,6 +1,7 @@
 package com.mcqa.controller;
 
 import com.mcqa.bean.LoginUser;
+import com.mcqa.bean.RoleType;
 import com.mcqa.bean.User;
 import com.mcqa.repository.QuestionRepository;
 import com.mcqa.repository.UserRepository;
@@ -38,6 +39,7 @@ public class LoginController {
                     model.addAttribute("questions", questionRepository.findAll());
                     return "admin";
                 case EDUCATOR:
+                    model.addAttribute("users", userRepository.findAllByRole(RoleType.STUDENT));
                     return "educator";
                 case STUDENT:
                     model.addAttribute("questions", questionRepository.findAll());

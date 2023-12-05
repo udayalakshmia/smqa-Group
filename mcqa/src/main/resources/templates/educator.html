@@ -32,29 +32,11 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>John</td>
-                                            <td>Doe</td>
-                                            <td>2</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Peter</td>
-                                            <td>Parker</td>
-                                            <td>1</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Diana</td>
-                                            <td>Prince</td>
-                                            <td></td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Wade</td>
-                                            <td>Wilson</td>
-                                            <td>4</td>
+                                        <tr th:each="user : ${users}">
+                                          <td><span th:text="${user.id}"></span></td>
+                                          <td><span th:text="${user.firstName}"></span></td>
+                                          <td><span th:text="${user.lastName}"></span></td>
+                                          <td><span th:text="${user.score}"></span></td>
                                         </tr>
                                     </tbody>
                                 </table>
