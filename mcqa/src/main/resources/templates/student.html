@@ -16,106 +16,43 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Exam</h1>
-                        <form>
+                          <form action="#" th:action="@{/evaluate-result}"  method="post" th:object="${user}">
+                            <span th:each="question : ${questions}">
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-floating mb-3 mb-md-0">
-                                        1. Which is the largest planet?
+                                        <span th:text="${question.id}"></span>.
+                                        <span th:text="${question.question}"></span>
                                     </div>
                                 </div>
                             </div>
                             <div class="row mb-3">
                                 <div class="col-md-3">
                                     <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q1a1" type="radio" name="q1">
-                                        <label class="form-check-label" for="q1a1">Earth</label>
+                                        <input class="form-check-input" th:id="'q' + ${question.id} + 'a1'" type="radio" th:name="'q' + ${question.id}">
+                                        <label class="form-check-label" th:for="'q' + ${question.id} + 'a1'"><span th:text="${question.option1}"></span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q1a2" type="radio" name="q1">
-                                        <label class="form-check-label" for="q1a2">Mercury</label>
+                                        <input class="form-check-input" th:id="'q' + ${question.id} + 'a2'" type="radio" th:name="'q' + ${question.id}">
+                                        <label class="form-check-label" th:for="'q' + ${question.id} + 'a2'"><span th:text="${question.option2}"></span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q1a3" type="radio" name="q1">
-                                        <label class="form-check-label" for="q1a3">Jupiter</label>
+                                        <input class="form-check-input" th:id="'q' + ${question.id} + 'a3'" type="radio" th:name="'q' + ${question.id}">
+                                        <label class="form-check-label" th:for="'q' + ${question.id} + 'a3'"><span th:text="${question.option3}"></span></label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q1a4" type="radio" name="q1">
-                                        <label class="form-check-label" for="q1a4">Saturn</label>
+                                        <input class="form-check-input" th:id="'q' + ${question.id} + 'a4'" type="radio" th:name="'q' + ${question.id}">
+                                        <label class="form-check-label" th:for="'q' + ${question.id} + 'a4'"><span th:text="${question.option4}"></span></label>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3 mb-md-0">
-                                        2. How many moons does earth have?
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q2a1" type="radio" name="q2">
-                                        <label class="form-check-label" for="q2a1">3</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q2a2" type="radio" name="q2">
-                                        <label class="form-check-label" for="q2a2">1</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q2a3" type="radio" name="q2">
-                                        <label class="form-check-label" for="q2a3">0</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q2a4" type="radio" name="q2">
-                                        <label class="form-check-label" for="q2a4">2</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating mb-3 mb-md-0">
-                                        3. Which is the closest planet to the sun?
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q3a1" type="radio" name="q3">
-                                        <label class="form-check-label" for="q3a1">Earth</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q3a2" type="radio" name="q3">
-                                        <label class="form-check-label" for="q3a2">Mercury</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q3a3" type="radio" name="q3">
-                                        <label class="form-check-label" for="q3a3">Jupiter</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-check form-check-solid">
-                                        <input class="form-check-input" id="q3a4" type="radio" name="q3">
-                                        <label class="form-check-label" for="q3a4">Saturn</label>
-                                    </div>
-                                </div>
-                            </div>
+                            </span>
                             <div class="mt-4 mb-0">
                                 <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Submit</a></div>
                             </div>

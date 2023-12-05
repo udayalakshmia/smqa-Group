@@ -17,6 +17,7 @@
             <a class="nav-link disabled" href="add-question">Add Question</a>
             <a class="nav-link" href="all-users">All Users</a>
             <a class="nav-link" href="add-user">Add User</a>
+            <a class="nav-link" href="login">Logout</a>
         </nav>
             <div id="layoutSidenav_content">
                 <main>
@@ -24,38 +25,38 @@
                         <h1 class="mt-4">Add Question</h1>
                         <div class="card mb-4">
                             <div class="card-body">
-                                <form>
+                                <form action="#" th:action="@{/add-question}"  method="post" th:object="${questionObj}">
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="question" type="text" placeholder="Enter the Question" />
+                                        <input class="form-control" id="question" type="text" placeholder="Enter the Question"  th:field="*{question}"/>
                                         <label for="question">Enter the Question</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="option1" type="text" placeholder="Option 1" />
+                                        <input class="form-control" id="option1" type="text" placeholder="Option 1" th:field="*{option1}"/>
                                         <label for="option1">Option 1</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="option2" type="text" placeholder="Option 2" />
+                                        <input class="form-control" id="option2" type="text" placeholder="Option 2" th:field="*{option2}"/>
                                         <label for="option2">Option 2</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="option3" type="text" placeholder="Option 3" />
+                                        <input class="form-control" id="option3" type="text" placeholder="Option 3" th:field="*{option3}"/>
                                         <label for="option3">Option 3</label>
                                     </div>
                                     <div class="form-floating mb-3">
-                                        <input class="form-control" id="option4" type="text" placeholder="Option 4" />
+                                        <input class="form-control" id="option4" type="text" placeholder="Option 4" th:field="*{option4}"/>
                                         <label for="option4">Option 4</label>
                                     </div>
                                     <div class="mb-3">
                                         <label for="answer">Answer</label>
-                                        <select class="form-control" id="answer">
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
+                                        <select class="form-control" id="answer" th:field="*{correctOption}">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
                                         </select>
                                     </div>
                                     <div class="mt-4 mb-0">
-                                        <div class="d-grid"><a class="btn btn-primary btn-block" href="login.html">Create Question</a></div>
+                                      <button type="submit">Create Question</button>
                                     </div>
                                 </form>
                             </div>
