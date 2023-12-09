@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import java.util.Optional;
+
 @Controller
 public class AdminController {
     private final UserRepository userRepository;
@@ -39,11 +41,12 @@ public class AdminController {
         return "add-user";
     }
 
-    @GetMapping("add-question")
-    public String allQuestion(Model model) {
+
+     @GetMapping("add-question-educator")
+    public String allQuestionEducator(Model model) {
         Question question = new Question();
         model.addAttribute("questionObj", question);
-        return "add-question";
+        return "add-question-educator";
     }
 
     @PostMapping("add-user")
@@ -62,5 +65,21 @@ public class AdminController {
         questionRepository.save(question);
         model.addAttribute("questions", questionRepository.findAll());
         return "admin";
+    }
+
+    @GetMapping("add-question")
+    public String allQuestion(Model model) {
+        Question question = new Question();
+        model.addAttribute("questionObj", question);
+        return "add-question";
+    }
+
+
+     @PostMapping("add-question-educator")
+    public String addQuestionEducator(@ModelAttribute("questionObj") Question question, Model model) {
+        question.setId(null);
+        questionRepository.save(question);
+        model.addAttribute("questions", questionRepository.findAll());
+        return "educator";
     }
 }

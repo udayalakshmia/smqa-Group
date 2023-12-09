@@ -14,7 +14,7 @@
     <body class="d-flex flex-column  bg-light  ">
         <nav class="navbar navbar-expand-lg navbar-light bg-primary  text-white position-sticky">
             <div class="container">
-              <a class="navbar-brand text-white font-bold " href="#">MCQA</a>
+              <a class="navbar-brand text-white font-bold " href="#">MCQA - Student</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -36,11 +36,9 @@
               </div>
             </div>
           </nav>
-          <div class="my-3 p-3"> 
-            <p class="h1"> Welcome first_name  nn lastName &#128075; &#x1F44B; !</p>
-            <p>In order the pass exam, you must score  above 50% </p>
-           
-          </div>
+        <div class="my-3 p-3">
+            <p class="h1"> Welcome,  <span th:text="${loggedInUsername}"></span></p>
+        </div>
           <main class="flex-grow-1  ">
             <div class="container-fluid px-4"> 
           <div class="start_btn d-flex justify-content-center align-items-center   flex-grow-1 h-50 mt-5 "><button class="btn bg-success button-53">Start Quiz</button></div>

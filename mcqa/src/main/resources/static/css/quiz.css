@@ -454,3 +454,9 @@ footer button.show{
     font-size: 1.25rem;
   }
 }
+
+.date_table{
+    display: flex !important;
+    justify-content: space-between !important;
+    cursor: pointer;
+  }
