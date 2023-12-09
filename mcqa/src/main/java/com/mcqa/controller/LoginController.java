@@ -27,12 +27,15 @@ public class LoginController {
     public String login(Model model) {
         LoginUser loginUser = new LoginUser();
         model.addAttribute("user", loginUser);
+
         return "login";
     }
 
     @PostMapping("/login")
     public String login(@ModelAttribute("user") LoginUser loginUser, Model model) {
         Optional<User> user = userRepository.findByEmailAndPassword(loginUser.getEmail(), loginUser.getPassword());
+        String loggedInUsername = user.get().getFirstName() ;
+        model.addAttribute("loggedInUsername", loggedInUsername);
         return user.map(value -> {
             switch (value.getRole()) {
                 case ADMIN:

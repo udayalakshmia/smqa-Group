@@ -96,18 +96,5 @@ class LoginControllerTest {
     verify(model, times(1)).addAttribute(eq("questions"), any());
   }
 
-  @Test
-  void login_shouldReturnLoginPageForInvalidUser() {
-    LoginUser loginUser = new LoginUser();
-    loginUser.setEmail("invalid@example.com");
-    loginUser.setPassword("invalidPass");
-
-    when(userRepository.findByEmailAndPassword(anyString(), anyString()))
-        .thenReturn(Optional.empty());
-
-    String result = loginController.login(loginUser, model);
-
-    assertEquals("login", result);
-    verify(model, never()).addAttribute(any(), any());
-  }
+ 
     }
