@@ -11,43 +11,78 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
-    <body class="sb-nav-fixed">
-        <nav class="nav nav-borders">
-            <a class="nav-link" href="admin">All Questions</a>
-            <a class="nav-link disabled" href="add-question">Add Question</a>
-            <a class="nav-link" href="all-users">All Users</a>
-            <a class="nav-link" href="add-user">Add User</a>
-            <a class="nav-link" href="login">Logout</a>
-        </nav>
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Add Question</h1>
-                        <div class="card mb-4">
-                            <div class="card-body">
+    <body class="   d-flex flex-column  bg-light    " >
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary  text-white position-sticky">
+            <div class="container">
+              <a class="navbar-brand text-white font-bold " href="#">MCQA</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto   d-flex justify-content-center align-items-center">
+                  <li class="nav-item active">
+                    <a class="nav-link text-white "  href="admin">Questions</a>
+                  </li>
+                  <li class="nav-item mx-1">
+                    <a class="nav-link text-white   "  href="all-users">Users</a>
+                  </li>
+               
+                
+                  <li class="nav-item mx-2">
+                    <a class="nav-link btn bg-white text-dark rounded-pill costum_shadom py-1" href="add-question"> + Question   </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link btn btn-dark text-white rounded-pill costum_shadom py-1 "  href="login">Logout  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
+                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                      </svg></a>
+                  </li>
+                
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <div class="my-3 p-3"> 
+            <p class="h1"> Welcome first_name lastName &#128075; &#x1F44B; !</p>
+            <p>In order the pass exam, you must score  above 50% </p>
+          </div>
+          <div id="layoutSidenav_content" class="  flex-grow-1 d-flex justify-content-center align-items-center">
+            <main class="flex-grow-1 my-3">
+                <div class="container-fluid px-4">
+            
+                    <div class="card mb-4 border-0 costum_shadom ">
+                        <div class="card-body    ">
+                                <h2 class="pt-3 pb-4 font-bold font-up deep-purple-text">Add question</h2>
                                 <form action="#" th:action="@{/add-question}"  method="post" th:object="${questionObj}">
-                                    <div class="form-floating mb-3">
+                                    <div class="form-floating mb-3   ">
                                         <input class="form-control" id="question" type="text" placeholder="Enter the Question"  th:field="*{question}"/>
                                         <label for="question">Enter the Question</label>
                                     </div>
-                                    <div class="form-floating mb-3">
+
+                                    <div class="">
+                                       
+                                      <div class="row"> 
+                                    <div class=" col form-floating mb-3  ">
                                         <input class="form-control" id="option1" type="text" placeholder="Option 1" th:field="*{option1}"/>
-                                        <label for="option1">Option 1</label>
+                                        <label for="option1   "> &nbsp Option 1</label>
                                     </div>
-                                    <div class="form-floating mb-3">
+                                    <div class=" col  form-floating mb-3  ">
                                         <input class="form-control" id="option2" type="text" placeholder="Option 2" th:field="*{option2}"/>
-                                        <label for="option2">Option 2</label>
-                                    </div>
-                                    <div class="form-floating mb-3">
+                                        <label for="option2 mx-1">&nbsp Option 2</label>
+                                    </div></div>
+                                    <div class="row"> 
+                                    <div class=" col form-floating mb-3   ">
                                         <input class="form-control" id="option3" type="text" placeholder="Option 3" th:field="*{option3}"/>
-                                        <label for="option3">Option 3</label>
+                                        <label for="option3">&nbsp Option 3</label>
                                     </div>
-                                    <div class="form-floating mb-3">
+                                    <div class="col form-floating mb-3   ">
                                         <input class="form-control" id="option4" type="text" placeholder="Option 4" th:field="*{option4}"/>
-                                        <label for="option4">Option 4</label>
+                                        <label for="option4"> &nbsp Option 4</label>
                                     </div>
+                                </div>
+                            </div>
                                     <div class="mb-3">
-                                        <label for="answer">Answer</label>
+                                        <label for="answer font-bold">Answer</label>
                                         <select class="form-control" id="answer" th:field="*{correctOption}">
                                             <option value="1">1</option>
                                             <option value="2">2</option>
@@ -55,8 +90,8 @@
                                             <option value="4">4</option>
                                         </select>
                                     </div>
-                                    <div class="mt-4 mb-0">
-                                      <button type="submit">Create Question</button>
+                                    <div class="mt-4 mb-0 d-flex justify-content-end">
+                                      <button type="submit" class="btn btn-primary rounded-pill costum_shadom py-1">Create Question</button>
                                     </div>
                                 </form>
                             </div>
