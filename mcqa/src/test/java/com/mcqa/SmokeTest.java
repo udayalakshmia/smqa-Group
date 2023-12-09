@@ -1,6 +1,5 @@
 package com.mcqa;
 
-
 import com.mcqa.controller.AdminController;
 import com.mcqa.controller.EducatorController;
 import com.mcqa.controller.LoginController;
@@ -12,9 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 public class SmokeTest {
-
-
-
     @Autowired
     private LoginController loginController;
     @Autowired
