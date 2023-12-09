@@ -5,6 +5,14 @@
 
 This Multiple Question and Answer Quiz Software is designed to facilitate the creation and administration of quizzes with multiple questions and answers. The software is configured to run in the Eclipse IDE, making it easy for developers to set up and use.
 
+## Database Configuration
+
+Database parameters can be configured using the `application.properties` file located under the `src/main/resources` folder. Update the necessary properties in this file to customize the database connection.
+
+mcqa.db script help to set the Database. 
+Path: src\main\resources\mcqa.db
+
+
 ## Installation
 
 Follow the steps below to set up the software in Eclipse:
@@ -24,12 +32,6 @@ Follow the steps below to set up the software in Eclipse:
 4. **Run as Java Application:**
    - After the Maven install is complete, right-click on the project again.
    - Choose **Run As > Java Application** to run the application.
-
-
-## Database Configuration
-
-Database parameters can be configured using the `application.properties` file located under the `src/main/resources` folder. Update the necessary properties in this file to customize the database connection.
-
 
 ## Running Test Coverage in Eclipse
 
@@ -105,5 +107,3 @@ The following guides illustrate how to use some features concretely:
 * [Handling Form Submission](https://spring.io/guides/gs/handling-form-submission/)
 * [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/)
 * [Accessing data with MySQL](https://spring.io/guides/gs/accessing-data-mysql/)
-
-
