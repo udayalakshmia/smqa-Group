@@ -28,6 +28,11 @@ public class AdminController {
         model.addAttribute("questions", questionRepository.findAll());
         return "admin";
     }
+    
+    @GetMapping("/")
+    public String index() {
+           return "redirect:/login";
+    }
 
     @GetMapping("all-users")
     public String allUsers(Model model) {
@@ -42,7 +47,54 @@ public class AdminController {
         return "add-user";
     }
 
-
+    @GetMapping("edit-user/{id}")
+    public String editUser(@PathVariable("id") long id,  Model model) {
+    	User user = userRepository.findById(Long.valueOf(id).intValue()).orElse(null);
+        if (user != null) {
+    	 model.addAttribute("user", user);
+        }
+        return "update-user";
+    }
+    
+    @PostMapping("/update-user/{id}")
+    public String updateUser(@PathVariable("id") long id,  User user, Model model) {
+        userRepository.save(user);
+        return "redirect:/all-users";
+    }
+    
+    @GetMapping("/delete-user/{id}")
+    public String deleteUser(@PathVariable("id") long id, Model model) {
+        User user = userRepository.findById(Long.valueOf(id).intValue())
+          .orElseThrow(() -> new IllegalArgumentException("Invalid user Id:" + id));
+        userRepository.delete(user);
+        return "redirect:/all-users";
+    }
+    
+    
+    @GetMapping("edit-question/{id}")
+    public String editQuestion(@PathVariable("id") long id,  Model model) {
+    	Question question = questionRepository.findById(Long.valueOf(id).intValue()).orElse(null);
+        if (question != null) {
+    	 model.addAttribute("questionObj", question);
+        }
+        return "update-question";
+    }
+    
+    @PostMapping("/update-question/{id}")
+    public String updateQuestion(@ModelAttribute("questionObj") Question question, Model model) {
+    	questionRepository.save(question);
+        return "redirect:/admin";
+    }
+    
+    @GetMapping("/delete-question/{id}")
+    public String deleteQuestion(@PathVariable("id") long id, Model model) {
+        Question question = questionRepository.findById(Long.valueOf(id).intValue())
+          .orElseThrow(() -> new IllegalArgumentException("Invalid Question Id:" + id));
+        questionRepository.delete(question);
+        return "redirect:/admin";
+    }
+    
+    
      @GetMapping("add-question-educator")
     public String allQuestionEducator(Model model) {
         Question question = new Question();
