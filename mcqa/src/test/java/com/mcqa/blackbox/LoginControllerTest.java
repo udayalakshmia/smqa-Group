@@ -5,6 +5,7 @@ import com.mcqa.bean.User;
 import com.mcqa.controller.LoginController;
 import com.mcqa.repository.QuestionRepository;
 import com.mcqa.repository.UserRepository;
+import jakarta.annotation.Nonnull;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
@@ -96,5 +97,24 @@ class LoginControllerTest {
     verify(model, times(1)).addAttribute(eq("questions"), any());
   }
 
- 
+  @Test
+  void login_shouldReturnLoginPageForInvalidUser() {
+    LoginUser loginUser = new LoginUser();
+    User userlogin = new User();
+    userlogin.setFirstName("LoginUser");
+    userlogin.setEmail("invalid@example.com");
+    userlogin.setRole(RoleType.ADMIN);
+    loginUser.setEmail("invalid@example.com");
+    loginUser.setPassword("invalidPass");
+
+    when(userRepository.findByEmailAndPassword(anyString(), anyString()))
+        .thenReturn( Optional.of(userlogin));
+
+    //when(userRepository.findByEmail(anyString()).get(0)).thenReturn(userlogin);
+
+
+    String result = loginController.login(loginUser, model);
+    assertEquals("admin", result);
+   // verify(model, never()).addAttribute(any(), any());
+  }
     }

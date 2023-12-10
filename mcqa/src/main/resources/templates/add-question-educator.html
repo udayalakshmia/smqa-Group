@@ -14,7 +14,7 @@
     <body class="   d-flex flex-column  bg-light    " >
       <nav class="navbar navbar-expand-lg navbar-light bg-primary  text-white position-sticky">
         <div class="container">
-          <a class="navbar-brand text-white font-bold " href="#">MCQA - Educator</a>
+          <a class="navbar-brand text-white font-bold " href="#">MCQA - EDUCATOR</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -48,7 +48,7 @@
                     <div class="card mb-4 border-0 costum_shadom ">
                         <div class="card-body    ">
                                 <h2 class="pt-3 pb-4 font-bold font-up deep-purple-text">Add question</h2>
-                                <form action="#" th:action="@{/add-question}"  method="post" th:object="${questionObj}">
+                                <form action="#" th:action="@{/add-question-educator}"  method="post" th:object="${questionObj}">
                                     <div class="form-floating mb-3   ">
                                         <input class="form-control" id="question" type="text" placeholder="Enter the Question"  th:field="*{question}"/>
                                         <label for="question">Enter the Question</label>

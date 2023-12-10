@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.Optional;
@@ -80,6 +81,22 @@ public class AdminController {
         question.setId(null);
         questionRepository.save(question);
         model.addAttribute("questions", questionRepository.findAll());
-        return "educator";
+        return "educator-question";
+    }
+
+    @PostMapping("/user/{userId}/update-score")
+    public String updateScore(@PathVariable Integer userId, Integer newScore) {
+        // Retrieve the user by ID
+        User user = userRepository.findById(userId).orElse(null);
+
+        if (user != null) {
+            // Update the user's score
+            user.setScore(newScore);
+            userRepository.save(user);
+            return "redirect:/user/" + userId;
+        } else {
+            // Handle user not found scenario
+            return "redirect:/notfound";
+        }
     }
 }
