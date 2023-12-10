@@ -40,7 +40,7 @@ INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, co
 
 INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (1, 'Nick', 'Fury', 'nick.fury@gmail.com', 'pass1', 'ADMIN', null);
 INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (2, 'Charles', 'Xavier', 'charles.xavier@gmail.com', 'pass2', 'EDUCATOR', null);
-INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (3, 'John', 'Doe', 'john.doe@gmail.com', 'pass3', 'STUDENT', null);
-INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (4, 'Peter', 'Parker', 'perter.parker@gmail.com', 'pass4', 'STUDENT', null);
-INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (5, 'Diana', 'Prince', 'diana.prince@gmail.com', 'pass5', 'STUDENT', null);
-INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (6, 'Wade', 'Wikson', 'wade.wilson@gmail.com', 'pass6', 'STUDENT', null);
+INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (3, 'John', 'Doe', 'john.doe@gmail.com', 'pass3', 'STUDENT', 7);
+INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (4, 'Peter', 'Parker', 'perter.parker@gmail.com', 'pass4', 'STUDENT', 6);
+INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (5, 'Diana', 'Prince', 'diana.prince@gmail.com', 'pass5', 'STUDENT', 5);
+INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (6, 'Wade', 'Wikson', 'wade.wilson@gmail.com', 'pass6', 'STUDENT', 4);

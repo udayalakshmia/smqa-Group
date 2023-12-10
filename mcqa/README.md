@@ -32,6 +32,14 @@ Follow the steps below to set up the software in Eclipse:
 4. **Run as Java Application:**
    - After the Maven install is complete, right-click on the project again.
    - Choose **Run As > Java Application** to run the application.
+   
+   If you have the following issue while Running:
+
+	- Web server failed to start. Port 8080 was already in use.
+	 Open the Command Prompt and run the following commands
+    -netstat -a -n -o | find "8080"
+    -taskkill /F /PID 30292 (30292 is TaskID)
+
 
 ## Running Test Coverage in Eclipse
 
