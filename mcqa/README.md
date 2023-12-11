@@ -1,5 +1,5 @@
 # SMQA-Group-25
-# Multiple choice Question and Answer Web App
+# Multiple choice Question and Answer Web App(MCQA)
 
 ## Introduction
 
@@ -11,6 +11,17 @@ Database parameters can be configured using the `application.properties` file lo
 
 mcqa.db script help to set the Database. 
 Path: src\main\resources\mcqa.db
+
+
+## MCQA login details: Please check the above mcqa.db user table
+Admin : nick.fury@gmail.com
+Admin password:pass1
+
+Educator: charles.xavier@gmail.com
+Educator Password:pass2
+
+Student:john.doe@gmail.com
+Student Password:pass3 
 
 
 ## Installation
@@ -76,12 +87,6 @@ spring.datasource.url=jdbc:mysql://localhost:3306/quizdb
 spring.datasource.username=root
 spring.datasource.password=rootpassword
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-
-## Running the application
-
-The project is a standard Maven project. To run it from the command line,
-type `mvnw` (Windows), or `./mvnw` (Mac & Linux), then open
-http://localhost:8080/login in your browser.
 
 
 ## Deploying to Production

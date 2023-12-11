@@ -26,16 +26,16 @@ create table mcqa.users
     score      int          null
 );
 
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (1, '1. What is the capital city of France?', 'Madrid', 'Rome', 'Berlin', 'Paris', 4);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (2, '2. Which planet is known as the Red Planet', 'Jupiter', 'Mars', 'Venus', 'Saturn', 2);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (3, '3. Which is the closest planet to the sun?', 'Earth', 'Mercury', 'Jupiter', 'Saturn', 2);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (4, '4. What is the largest mammal in the world?', 'Elephant', 'Giraffe', 'Blue Whale', 'Gorilla', 3);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (5, '5. Who wrote the play Romeo and Juliet?', 'Charles Dickens', 'William Shakespeare', 'Jane Austen', 'Mark Twain', 2);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (6, '6. Which famous scientist developed the theory of general relativity?', 'Isaac Newton', ' Albert Einstein', 'Stephen Hawking', ' Galileo Galilei', 2);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (7, '7. In what year did the Titanic sink?', '1905', '1912', '1920', '1931', 2);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (8, '8. What is the currency of Japan?', 'Yuan', 'Won', 'Yen', 'Ringgit', 3);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (9, '9. What is the largest ocean on Earth?', 'Atlantic Ocean', ' Indian Ocean', 'Southern Ocean', 'Pacific Ocean', 4);
-INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (10, '10. Which is the largest planet?', 'Earth', 'Mercury', 'Jupiter', 'Saturn', 3);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (1, 'What is the capital city of France?', 'Madrid', 'Rome', 'Berlin', 'Paris', 4);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (2, 'Which planet is known as the Red Planet', 'Jupiter', 'Mars', 'Venus', 'Saturn', 2);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (3, 'Which is the closest planet to the sun?', 'Earth', 'Mercury', 'Jupiter', 'Saturn', 2);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (4, 'What is the largest mammal in the world?', 'Elephant', 'Giraffe', 'Blue Whale', 'Gorilla', 3);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (5, 'Who wrote the play Romeo and Juliet?', 'Charles Dickens', 'William Shakespeare', 'Jane Austen', 'Mark Twain', 2);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (6, 'Which famous scientist developed the theory of general relativity?', 'Isaac Newton', ' Albert Einstein', 'Stephen Hawking', ' Galileo Galilei', 2);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (7, 'In what year did the Titanic sink?', '1905', '1912', '1920', '1931', 2);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (8, 'What is the currency of Japan?', 'Yuan', 'Won', 'Yen', 'Ringgit', 3);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (9, 'What is the largest ocean on Earth?', 'Atlantic Ocean', ' Indian Ocean', 'Southern Ocean', 'Pacific Ocean', 4);
+INSERT INTO mcqa.questions (id, question, option1, option2, option3, option4, correct_option) VALUES (10, 'Which is the largest planet?', 'Earth', 'Mercury', 'Jupiter', 'Saturn', 3);
 
 
 INSERT INTO mcqa.users (id, first_name, last_name, email, password, role, score) VALUES (1, 'Nick', 'Fury', 'nick.fury@gmail.com', 'pass1', 'ADMIN', null);
