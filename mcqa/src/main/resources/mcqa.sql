@@ -1,5 +1,3 @@
-drop database mcqa;
-
 create database mcqa;
 
 create table mcqa.questions
